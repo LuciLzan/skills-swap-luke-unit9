@@ -87,7 +87,37 @@
             <p id="total-result">Total: $0</p>
         </div>
     </section>
+    <section class="create-skill">
+        <h2>Offer a Skill</h2>
 
+        <form id="create-skill-form">
+            <label>
+                Title:
+                <input type="text" id="skill-title" required />
+            </label>
+
+            <label>
+                Category:
+                <select id="skill-category" required>
+                    <option value="programming">Programming</option>
+                    <option value="music">Music</option>
+                    <option value="career">Career</option>
+                </select>
+            </label>
+
+            <label>
+                Price ($/hr):
+                <input type="number" id="skill-price" required />
+            </label>
+
+            <label>
+                Description:
+                <textarea id="skill-description" required></textarea>
+            </label>
+
+            <button type="submit">Create Skill</button>
+        </form>
+    </section>
 </main>
 <footer>
     <p>&copy; 2026 SkillSwap. All rights reserved.</p>

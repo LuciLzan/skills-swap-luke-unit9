@@ -123,6 +123,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
             matchResults.appendChild(div);
         });
+
     });
+
+    const form = document.getElementById("create-skill-form");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const skillData = {
+            title: document.getElementById("skill-title").value,
+            category: document.getElementById("skill-category").value,
+            price: parseFloat(document.getElementById("skill-price").value),
+            description: document.getElementById("skill-description").value
+        };
+
+        // POST to database function
+        window.apiService.createSkill(skillData).then(async (response) => {
+            await loadSkills()
+            // Re-render UI
+            renderSkills(skills);
+        });
+
+        form.reset();
+    });
+
 
 });
