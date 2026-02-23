@@ -37,9 +37,9 @@
                 Category:
                 <select id="match-category">
                     <option value="all">All</option>
-                    <option value="programming">Programming</option>
-                    <option value="music">Music</option>
-                    <option value="career">Career</option>
+                    <option value="Programming">Programming</option>
+                    <option value="Music">Music</option>
+                    <option value="Career">Career</option>
                 </select>
             </label>
 
@@ -60,43 +60,12 @@
         <!-- Filter Buttons -->
         <div class="filter-buttons">
             <button data-category="all">All</button>
-            <button data-category="programming">Programming</button>
-            <button data-category="music">Music</button>
-            <button data-category="career">Career</button>
+            <button data-category="Programming">Programming</button>
+            <button data-category="Music">Music</button>
+            <button data-category="Career">Career</button>
         </div>
 
-        <div class="skills-grid">
-            <article class="skill-card" data-category="career">
-                <h3>Algebra Tutoring</h3>
-                <p>Help with equations and problem-solving strategies.</p>
-                <span class="price">$18/hr</span>
-                <p class="provider">By: Emily Carter</p>
-                <p class="contact">Contact: emily@email.com</p>
-            </article>
-
-            <article class="skill-card" data-category="programming">
-                <h3>Intro to Python</h3>
-                <p>Learn variables, loops, and functions.</p>
-                <span class="price">$22/hr</span>
-                <p class="provider">By: Daniel Kim</p>
-                <p class="contact">Contact: daniel@email.com</p>
-            </article>
-
-            <article class="skill-card" data-category="career">
-                <h3>Essay Writing</h3>
-                <p>Improve structure, grammar, and arguments.</p>
-                <span class="price">$20/hr</span>
-                <p class="provider">By: Sophia Martinez</p>
-                <p class="contact">Contact: sophia@email.com</p>
-            </article>
-
-            <article class="skill-card" data-category="music">
-                <h3>Guitar Basics</h3>
-                <p>Learn chords, strumming, and songs.</p>
-                <span class="price">$25/hr</span>
-                <p class="provider">By: Michael Chen</p>
-                <p class="contact">Contact: michael@email.com</p>
-            </article>
+        <div class="skills-grid" id="skills-container">
         </div>
     </section>
     <section class="calculator">
@@ -118,11 +87,43 @@
             <p id="total-result">Total: $0</p>
         </div>
     </section>
+    <section class="create-skill">
+        <h2>Offer a Skill</h2>
+
+        <form id="create-skill-form">
+            <label>
+                Title:
+                <input type="text" id="skill-title" required />
+            </label>
+
+            <label>
+                Category:
+                <select id="skill-category" required>
+                    <option value="programming">Programming</option>
+                    <option value="music">Music</option>
+                    <option value="career">Career</option>
+                </select>
+            </label>
+
+            <label>
+                Price ($/hr):
+                <input type="number" id="skill-price" required />
+            </label>
+
+            <label>
+                Description:
+                <textarea id="skill-description" required></textarea>
+            </label>
+
+            <button type="submit">Create Skill</button>
+        </form>
+    </section>
 </main>
 <footer>
     <p>&copy; 2026 SkillSwap. All rights reserved.</p>
 </footer>
 
+<script src="api-service.js"></script>
 <script src="skillswap-functions.js"></script>
 <script src="script.js"></script>
 </body>

@@ -235,6 +235,70 @@ header {
     border-bottom: 1px solid #ddd;
 }
 
+.create-skill {
+    background-color: #ffffff;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.create-skill h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #1e293b;
+}
+
+#create-skill-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+#create-skill-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    color: #374151;
+    gap: 0.4rem;
+}
+
+#create-skill-form input,
+#create-skill-form select,
+#create-skill-form textarea {
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 0.95rem;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+#create-skill-form input:focus,
+#create-skill-form select:focus,
+#create-skill-form textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+#create-skill-form button {
+    align-self: flex-start;
+    padding: 0.7rem 1.5rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#create-skill-form button:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -243,3 +307,5 @@ footer {
     color: white;
     margin-top: 40px;
 }
+
+
